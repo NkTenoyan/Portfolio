@@ -1,0 +1,104 @@
+.navbar {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  position: sticky; 
+  top: 0; 
+  z-index: 10;
+  padding: 12px 10px; 
+  margin-bottom: 16px;
+  background: linear-gradient(180deg, rgba(23,26,43,0.85), rgba(23,26,43,0.55));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; 
+  backdrop-filter: blur(10px);
+  
+}
+
+.navbar-logo {
+  display: flex;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  left:4px;
+  cursor: pointer;
+}
+.heart {
+  color: #bababa;
+  font-size: 1.1rem;
+  position: relative;
+  top: 5px;
+  left: 3px;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: relative;
+  left: 6px;
+  color: white;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: #6ea8fe;
+}
+
+/* Mobile Button */
+.menu-btn {
+  color: white;
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  background: linear-gradient(180deg, rgba(23,26,43,0.85), rgba(23,26,43,0.55));
+  width: 220px;
+  /* height: 100vh; */
+  padding: 80px 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08); 
+  backdrop-filter: blur(10px);
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide desktop menu */
+  }
+  .menu-btn {
+    display: block; /* show hamburger */
+  }
+}
