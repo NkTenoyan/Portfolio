@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 60px; */
+  gap: 200px;
   padding: 100px 100px;
   flex-wrap: wrap;
   max-width: 1200px;
@@ -33,6 +33,7 @@
   overflow: hidden;
   width: 0; /* start hidden */
   animation: typing 4s steps(16, end) forwards, blink 0.7s step-end infinite;
+  animation-fill-mode: forwards;
 }
 
 /* Typing effect */
@@ -45,6 +46,10 @@
 @keyframes blink {
   from { border-color: transparent; }
   50% { border-color: #6ea8fe; }
+}
+
+.typing.finished {
+  border-right: none;
 }
 
 .home-content .accent {
@@ -159,6 +164,7 @@
   .home {
     flex-direction: column-reverse;
     padding: 40px 20px;
+    gap: 60px;
   }
 
   .home-content h1 {

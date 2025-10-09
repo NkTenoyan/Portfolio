@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Skills.css";
-import Footer from "../components/Footer";
 
 // Skill categories with titles, descriptions, and skills with proficiency levels
 const skillCategories = [

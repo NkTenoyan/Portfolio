@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {AnimatePresence, motion} from 'framer-motion';
 import './Navbar.css';
-import {FaBars, FaTimes, FaHeart} from 'react-icons/fa';
+import {FaBars, FaTimes} from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 function Navbar() {
@@ -16,10 +16,10 @@ function Navbar() {
         // animate={{ y: 0, opacity: 1 }}
         // transition={{ type: "spring", stiffness: 220, damping: 18 }}
     >   
-        <Link to='home' smooth={true} duration={600} >
+        <Link to='home' smooth={true} duration={600} onClick={close} offset={-140}>
             <div className="navbar-logo"> 
                 Nk
-                <motion.div className="heart" animate={{ rotateY: 360 }} transition={{ repeat: Infinity, duration: 10, ease: "linear" }}><FaHeart/></motion.div>
+                {/* <motion.div className="heart" animate={{ rotateY: 360 }} transition={{ repeat: Infinity, duration: 10, ease: "linear" }}><FaHeart/></motion.div> */}
                 <div className="name">
                 Tenoyan 
                 </div>  

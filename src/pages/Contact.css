@@ -76,6 +76,10 @@
   box-shadow: 0 0 10px rgba(110, 168, 254, 0.5);
 }
 
+.submit{
+  margin-left: -300px; 
+}
+
 .foot{
   width: 95%;
   position: sticky;
@@ -103,4 +107,8 @@
   .contact-form {
     width: 100%;
   }
+
+  .submit{
+  margin-left: 0px; 
+}
 }

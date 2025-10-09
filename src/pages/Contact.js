@@ -76,7 +76,7 @@ function Contact() {
           />
           <textarea
             name="message"
-            rows="6"
+            rows="7"
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}

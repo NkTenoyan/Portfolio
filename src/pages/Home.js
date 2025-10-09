@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../components/Button';
 // import { useNavigate } from 'react-router-dom';
 import pic from '../assets/WhatsApp Image 2025-10-01 at 12.15.05_a1d5e6e3.jpg';
@@ -9,6 +9,15 @@ import {Link} from 'react-scroll';
 
 
 function Home() {
+
+    const [isFinished, setIsFinished] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsFinished(true);
+        }, 4000)
+        return () => clearTimeout(timer);
+    }, [])
 
     // const negative = useNavigate(); //navigate to other pages
 
@@ -29,7 +38,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
         >
-            <h1 className='typing'>Hello I'm <span className='accent'>Tenoyan</span></h1>
+            <h1 className={`typing ${isFinished ? "finished" : ""}`}>Hello I'm <span className='accent'>Tenoyan</span></h1>
             
             <p>A passionate Software Engineer & Data Analyst with expertise in Java, Python, SQL, Excel, and Power BI.
                I love turning data into insights and building smart, practical solutions

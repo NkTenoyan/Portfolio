@@ -21,14 +21,21 @@
   font-weight: bold;
   left:4px;
   cursor: pointer;
+  background: linear-gradient(90deg, #626364, #e7ebf1, #bcbbbd, #6ea8fe);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s ease infinite;
+
 }
-.heart {
+
+/* .heart {
   color: #bababa;
   font-size: 1.1rem;
   position: relative;
   top: 5px;
   left: 3px;
-}
+} */
 
 .name {
   font-size: 1.4rem;
@@ -36,6 +43,23 @@
   position: relative;
   left: 6px;
   color: white;
+   background: linear-gradient(90deg, #626364, #e7ebf1, #bcbbbd, #6ea8fe);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -50,6 +74,7 @@ a {
 }
 
 .nav-links a {
+  font-size: 1.2rem;
   text-decoration: none;
   color: #fff;
   transition: color 0.2s;
